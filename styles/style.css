@@ -12,15 +12,48 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
+    min-inline-size: 375px;
     background-color: var(--page-background-color);
     font-family: var(--page-font), sans-serif;
+    margin: 0;
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+}
+
+.header {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    position: relative;
+    block-size: 668px;
+    background-image: url("../images/cover-image-dark.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-block-end: 68px;
+}
+
+.header__rec {
+    color: var(--text-color);
+    font-weight: 400;
+    position: absolute;
+    top: 15px;
+    right: 38px;
+}
+
+.header__rec::after {
+    content: "";
+    background-image: url("../images/ellipse.svg");
+    position: absolute;
+    inline-size: 21px;
+    block-size: 21px;
 }
 
 .header__title {
     color: var(--page-tile-color);
     font-weight: bold;
-    font-size: 116px;
+    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+    text-shadow: 4px 4px 0 var(--accent-color);
+    margin: 65px 10px 0;
+    line-height: 96px;
 }
 
 .header__theme-menu-button {
@@ -31,8 +64,67 @@
     font-size: 18px;
     font-weight: 400;
     line-height: 18px;
+    width: 100%;
+    height: 100%;
+    padding: 0;
 }
 
 .header__theme-menu-item {
     list-style: none;
+}
+
+.header__theme-menu-item:last-of-type {
+    border: 1px solid #FF0070
+}
+
+.decorated-zone {
+
+}
+.decorated-zone::before {
+    content: '';
+    position: absolute;
+    inline-size: 25px;
+    block-size: 25px;
+    right: 10px;
+    top: 10px;
+    border-top: 1px solid var(--accent-color);
+    border-right: 1px solid var(--accent-color);
+}
+
+.decorated-zone::after {
+        content: '';
+        position: absolute;
+        inline-size: 25px;
+        block-size: 25px;
+        left: 10px;
+        bottom: 10px;
+        border-bottom: 1px solid var(--accent-color);
+        border-left: 1px solid var(--accent-color);
+}
+.header__subtitle {
+    background-color: var(--accent-color);
+    color: var(--section-title-color);
+    font-size: 18px;
+    line-height: 23px;
+    margin: 55px 10px 0;
+}
+
+.header__theme-menu {
+    justify-self: end;
+    align-self: end;
+    margin-block-start: 75px;
+    margin-inline-end: 10px;
+}
+
+.header__theme-menu-list {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.header__theme-menu-item {
+    block-size: 26px;
+    inline-size: 70px;
 }
