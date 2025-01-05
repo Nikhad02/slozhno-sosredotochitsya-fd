@@ -9,8 +9,22 @@
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
+    --page-background-color:#FFF1F7;
+    --page-tile-color: #FFC2E6;
+    --text-color: #353430;
+    --accent-color:#FF8DCB;
+    --section-title-color: #353430;
+    --paragraph-color: #353430;
 }
 
 .theme-light .page {
+    background-color:var(--page-background-color);
   /* Вам также нужно будет написать ряд подобных селекторов */
+}
+
+.theme-light .header {
+    background-image: url("/images/cover-image-light.png");
+}
+.theme-light .header__rec {
+    display: none;
 }

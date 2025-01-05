@@ -1,3 +1,14 @@
+:root
+{
+    --page-background-color: #000028;
+    --text-color: #FF0070;
+    --page-background-image: url("../images/cover-image-dark.png");
+    --page-font: 'IBM Plex mono';
+    --page-tile-color: #DB00FF;
+    --accent-color: #FF0070;
+    --section-title-color: #000028;
+    --paragraph-color: #F1B2CE;
+}
 /*
   Переменные для вашего проекта
   и их переопределение под различные устройства
